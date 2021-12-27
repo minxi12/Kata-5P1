@@ -11,7 +11,7 @@ public class SelectApp {
 
     private Connection connect() {
 // SQLite connection string
-        String url = "jdbc:sqlite:KATA5.db";
+        String url = "jdbc:sqlite:mail.db";
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);
@@ -22,7 +22,7 @@ public class SelectApp {
     }
 
     public void selectAll() {
-        String sql = "SELECT * FROM PEOPLE";
+        String sql = "SELECT * FROM EMAIL";
         try (Connection conn = this.connect();
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(sql)) {
