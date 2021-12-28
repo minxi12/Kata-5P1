@@ -11,7 +11,7 @@ public class Kata05 {
 
     public static void main(String[] args) throws IOException {
         String url = "C:/Users/Lou Minxi/Documents/NetBeansProjects/Kata05/mail.txt";
-        List<String> email = kata5p1.MailListReader.read(url);
+        List<String> email = kata05.MailListReader.read(url);
         
         InsertarDatosTabla PreparedStatement = new InsertarDatosTabla();
         for (String i : email) {
